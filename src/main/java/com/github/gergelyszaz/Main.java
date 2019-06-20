@@ -17,9 +17,9 @@ import org.springframework.stereotype.Component;
 public class Main {
 	
 	@Autowired
-	DelegateServiceImpl delegateServiceImpl;
+	DelegateService delegateService;
 	@Autowired
-	ServiceImpl classServiceImpl;
+	Service classService;
 
 	public static void main(String[] args) {
 		try (AnnotationConfigApplicationContext context =
@@ -32,8 +32,8 @@ public class Main {
 	}
 
 	public void doSomething() {
-		System.out.println(delegateServiceImpl.getName());
+		System.out.println(delegateService.getName());
 		
-		System.out.println(classServiceImpl.getName());
+		System.out.println(classService.getName());
 	}
 }

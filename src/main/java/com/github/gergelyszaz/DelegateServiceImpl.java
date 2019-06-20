@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DelegateServiceImpl implements Service {
+public class DelegateServiceImpl implements DelegateService {
 
 	@Autowired
-	private ServiceImpl otherService;
+	private Service otherService;
 	
 
 	@Override
